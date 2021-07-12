@@ -1,0 +1,48 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		double num1, num2, sum;
+		string act;
+		
+		Console.WriteLine("Pick two numbers please");
+		num1 = double.Parse(Console.ReadLine());
+		num2 = double.Parse(Console.ReadLine());
+		Console.WriteLine("choose an operator (+, -, /, *)");
+		act = Console.ReadLine();
+
+		while(act != "+" && act != "-" && act != "/" && act != "*")
+		{
+			Console.WriteLine("You didnt choose an operator");
+			Console.WriteLine("choose an operator (+, -, /, *)");
+			act = Console.ReadLine();
+		}
+
+		if (act == "+")
+		{
+			sum = num1 + num2;
+			Console.WriteLine(" Sum = " + sum);
+		}
+
+		else if (act == "-")
+		{
+			sum = num1 - num2;
+			Console.WriteLine(" Sum = " + sum);
+		}
+
+		else if (act == "/")
+		{
+			sum = num1 / num2;
+			Console.WriteLine(" Sum = " + sum);
+		}
+
+		else if (act == "*")
+		{
+			sum = num1 * num2;
+			Console.WriteLine(" Sum = " + sum);
+		}
+
+	}
+}
